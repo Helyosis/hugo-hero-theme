@@ -1,12 +1,17 @@
 .hero-image {
-  background-size: cover;
+  @media screen and (min-width:500px) {
+    background-position: center  $header-height;
+  }
+  @media not screen and (min-width:500px) {
+    background-position: center;
+  }
+  background-size: contain;
   background-repeat: no-repeat;
-  // background-position: top center;
+  //background-position: top center;
   background-blend-mode: overlay;
   background-color: $primary;
-  height: 400px;
   position: relative;
-  padding-top: 60px;
+  padding-top: 2em;
   .container {
     height: 100%;
     display: flex;
@@ -18,7 +23,7 @@
   }
   .hero-text {
     flex: 0;
-    color: #ffffff;
+    color: #eaee0e;
     margin: auto 0;
     h1 {
       font-size: 3rem;
@@ -57,6 +62,7 @@
 }
 .hero-image-fullscreen {
   height: 100vh;
+  
 }
 .hero-image-setheight {
   height: 460px;
